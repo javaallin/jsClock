@@ -14,7 +14,11 @@ function handleSubmit(event){
   const currentValue = input.value;
   paintGreeting(currentValue);
   saveName(currentValue);
-
+  showAddBtn();
+}
+function showAddBtn(){
+  const addBtn = document.querySelector(".addBtn");
+  addBtn.classList.add(SHOWING_CN);
 }
 
 function askForName(){
@@ -25,7 +29,7 @@ function askForName(){
 function paintGreeting(text){
   form.classList.remove(SHOWING_CN);
   greeting.classList.add(SHOWING_CN);
-  greeting.innerText =`Hello ${text} !!`;
+  greeting.innerText =`User : ${text}`;
 }
 function loadName(){
   const currentUser = localStorage.getItem(USER_LS);
@@ -33,6 +37,7 @@ function loadName(){
     askForName();
   }else{
     paintGreeting(currentUser);
+    showAddBtn();
   }
 }
 function init(){

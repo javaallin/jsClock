@@ -1,16 +1,16 @@
 const body = document.querySelector("body");
 
-const IMG_NUMBER = 5;
+const BG_IMG_NUMBER = 3;
 
 function paintImage(imgNumber){
   const image = new Image();
-  image.src = `./images/${imgNumber + 1}.jpg`;
+  image.src = `./images/bg_${imgNumber + 1}.jpg`;
   image.classList.add("bgImage");
   body.append(image);
 
 }
 function genRandom(){
-  const number = Math.floor(Math.random() * IMG_NUMBER);
+  const number = Math.floor(Math.random() * BG_IMG_NUMBER);
   return number;
 }
 

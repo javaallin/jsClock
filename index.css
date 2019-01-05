@@ -3,18 +3,66 @@
 
 body {
   background-color: #000000;
-  font-family: 'Nanum Gothic', sans-serif;
+  /* font-family: 'Nanum Gothic', sans-serif; */
+  font-family: 'Nanum Brush Script', cursive;
 
 
 }
-.js-greetings{
+.header {
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 130px;
+  background: rgba(0, 0, 0,.3);
+}
+.header .user{
+  position: absolute;
+  top:30%;
+  left:80%;
+  width: 180px;
+}
+.header .user .initBtn{
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-left: 5px;
+  color: #fff;
+  background: rgba(255,0,0,.4);
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+.header .user .Btn{
+  margin-top: 20px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: rgba(255,255,235,.2);
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+.header .user .addBtn{
+  float : right;
+}
+.header .user .toDoListBtn{
+  background: rgba(0,230,0,.2);
+}
+.header .js-greetings{
   font-weight: bold;
-  font-size : 30px;
-  margin-left: 50px;
+  font-size : 25px;
+  color: #fff;
+  text-shadow: 2px 2px 3px black;
+  float: left;
 }
 
 .form,
-.greetings {
+.greetings,
+.box,
+.addBtn,
+.swiper-container {
   display: none;
 }
 .showing {
@@ -40,22 +88,105 @@ body {
   }
 }
 
-.js-toDoForm,
-.js-form{
-  margin-left: 50px;
+.header .js-clock{
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  font-size:50px;
+  text-align: center;
+  width: 300px;
+  margin: 0;
+}
+.header .js-clock h1{
+  color : #fff;
+  text-shadow: 2px 2px 3px black;
 }
 
-.js-toDoList{
-  margin-left: 60px;
+.header .js-weather{
+  font-size:25px;
+  color: #fff;
+  margin:0;
+  text-align: center;
+  background: rgba(0,0,0,.7);
 }
-
-.main {
-  position:absolute;
-  top:20%;
-  left:50%;
-  margin: 0px 0px 0px -150px;
+.body {
+  position: absolute;
+  left: 0;
+  top: 140px;
+  width: 100%;
+  height: 80%;
 }
+.body .box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 400px;
+  padding: 40px;
+  background: rgba(0, 0, 0, .8);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.5);
+  border-radius: 10px;
+  animation: fadeIn 1s linear;
+  z-index: 2;
+}
+.body .box h2{
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+.body .box .inputBox{
+  position: relative;
+}
+.body .box .inputBox input{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.body .box .inputBox label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 9px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+.body .box .inputBox input:focus ~ label,
+.body .box .inputBox input:valid ~ label{
+  top: -19px;
+  left: 0;
+  color: #03a9f4;
+  font-size: 12px;
+}
+.body .box input[type="submit"]{
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #03a9f4;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
 
-.js-clock{
-  font-size:35px;
+}
+.body .box input[type="button"]{
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: red;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
 }

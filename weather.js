@@ -12,7 +12,8 @@ function getWeather(lat, lon){
         const temperature = json.main.temp;
         const place = json.name;
         const description = json.weather[0].description;
-        weather.innerText=`${temperature} @ ${place} - ${description}`;
+        const icon = json.weather[0].icon;
+        weather.innerText=`현재 온도 : ${temperature} ℃  - ${description} \n 현재 위치 : ${place}`;
       })
 }
 function saveCoords(coordsObj){
