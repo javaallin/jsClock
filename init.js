@@ -9,7 +9,7 @@ function handleInitBtn(){
 function removeAll(){
   localStorage.removeItem("coords");
   localStorage.removeItem("toDoList");
-  localStorage.removeItem("name");
+  localStorage.removeItem("currentUser");
 }
 function reload(){
   location.reload();
