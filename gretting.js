@@ -39,7 +39,7 @@ function loadName(){
   }else{
     paintGreeting(currentUser);
     showAddBtn();
-    swiper_container.classList.Add(SHOWING_CN);
+    swiper_c.classList.Add(SHOWING_CN);
   }
 }
 function init(){
