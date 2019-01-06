@@ -19,33 +19,23 @@ body {
 .header .user{
   position: absolute;
   top:30%;
-  left:80%;
-  width: 180px;
+  left:70%;
+  width: 250px;
 }
-.header .user .initBtn{
-  background: transparent;
-  border: none;
-  outline: none;
-  margin-left: 5px;
-  color: #fff;
-  background: rgba(255,0,0,.4);
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 7px;
-}
-.header .user .Btn{
-  margin-top: 20px;
+.header .user .btn{
+  margin-top : 10px;
   background: transparent;
   border: none;
   outline: none;
   color: #fff;
+  height: 30px;
   background: rgba(255,255,235,.2);
   padding: 5px 10px;
   cursor: pointer;
   border-radius: 7px;
 }
-.header .user .addBtn{
-  float : right;
+.header .user .initBtn{
+  background: rgba(255,0,0,.4);
 }
 .header .user .toDoListBtn{
   background: rgba(0,230,0,.2);
@@ -55,13 +45,11 @@ body {
   font-size : 25px;
   color: #fff;
   text-shadow: 2px 2px 3px black;
-  float: left;
 }
-
+.user_info_box,
 .form,
 .greetings,
 .box,
-.addBtn,
 .swiper-container {
   display: none;
 }
@@ -189,4 +177,60 @@ body {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
+}
+.body .user_info_box{
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  transform: translate(-30%,-45%);
+  width: 350px;
+  height: 250px;
+  padding: 40px 80px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.8);
+  transition: 10s;
+  animation: fadeIn 2s linear;
+}
+.body .user_info_box h2{
+  margin: 0;
+  padding: 0 0 20px;
+  color: #fff;
+  letter-spacing: 10px;
+  font-size: 50px;
+  text-align: center;
+}
+.body .user_info_box p{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.body .user_info_box input[type="text"]{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+::placeholder{
+  color: rgba(255, 255, 255, 0.5);
+}
+.body .user_info_box input[type="submit"]{
+  border: none;
+  outline: none;
+  height: 30px;
+  margin-top: 20px;
+  font-size: 16px;
+  background: #7f8fa6;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.body .user_info_box input[type="submit"]:hover{
+  background: #fff;
+  color: #262626;
 }

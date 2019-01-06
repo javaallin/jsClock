@@ -10,6 +10,7 @@ function removeAll(){
   localStorage.removeItem("coords");
   localStorage.removeItem("toDoList");
   localStorage.removeItem("currentUser");
+  swiper_container.classList.remove(SHOWING_CN);
 }
 function reload(){
   location.reload();
